@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>性格測驗</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>性格測驗</h1>
+        <div class="intro">
+            <p>歡迎參加我們的性格測驗！這個測驗將幫助你更好地了解自己的性格特點。</p>
+            <p>測驗包含3個簡單的問題，只需要幾分鐘就能完成。</p>
+            <button id="startBtn" onclick="startTest()">開始測驗</button>
+        </div>
+        <div id="quiz" style="display: none;">
+            <div id="question" class="question"></div>
+        </div>
+        <div id="loading" style="display: none;">結果產生中<span class="loading-dots"></span></div>
+        <div id="result"></div>
+        <button id="retakeBtn" style="display: none;" onclick="retakeTest()">重新測試</button>
+        <div class="footer">Made By AI</div> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+body {
+    font-family: 'Noto Sans TC', 'Microsoft YaHei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
+    background-color: #787373;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 600px; /* 固定宽度 */
+    height: 800px; /* 固定高度 */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* 半透明背景颜色 */
+    border: 0px solid #000000;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow-y: auto; /* 当内容超出容器高度时启用垂直滚动 */
+    position: relative; /* 相对定位 */
+    color: white; /* 确保文本在深色背景上可读 */
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/pexels-fabiano-rodrigues-1662298.jpg') no-repeat center center/cover; /* 替换 'your-image-url.jpg' 为实际图片 URL */
+    opacity: 0.5; /* 调整透明度 */
+    z-index: -1; /* 使背景图片位于内容后面 */
+}
+
+h1 {
+    color: #fff; /* 确保标题在深色背景上可读 */
+    text-align: center;
+    font-weight: normal;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.question {
+    background-color: rgba(255, 255, 255, 0.1); /* 浅色半透明背景 */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.option {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.option:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#result, #loading {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+#retakeBtn, #startBtn {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 12px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+#retakeBtn:hover, #startBtn:hover {
+    background-color: #007B9A;
+    transform: scale(1.05);
+}
+
+.loading-dots::after {
+    content: '...';
+    animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        content: '.';
+    }
+    40% {
+        content: '..';
+    }
+    60%, 100% {
+        content: '...';
+    }
+}
+.footer {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
